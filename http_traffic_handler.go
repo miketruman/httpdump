@@ -359,6 +359,7 @@ func (h *HTTPTrafficHandler) printNormalRequest(req *httpport.Request) {
 
 // print http response
 func (h *HTTPTrafficHandler) printResponse(uri string, resp *httpport.Response) {
+	return
 	defer discardAll(resp.Body)
 	if h.option.Level == "url" {
 		return
